@@ -1,0 +1,14 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/res/qss">
+        <file alias="AMOLED.qss">resources/qss/AMOLED.qss</file>
+        <file alias="Aqua.qss">resources/qss/Aqua.qss</file>
+        <file alias="ConsoleStyle.qss">resources/qss/ConsoleStyle.qss</file>
+        <file alias="ElegantDark.qss">resources/qss/ElegantDark.qss</file>
+        <file alias="MacOS.qss">resources/qss/MacOS.qss</file>
+        <file alias="ManjaroMix.qss">resources/qss/ManjaroMix.qss</file>
+        <file alias="MaterialDark.qss">resources/qss/MaterialDark.qss</file>
+        <file alias="NeonButtons.qss">resources/qss/NeonButtons.qss</file>
+        <file alias="Ubuntu.qss">resources/qss/Ubuntu.qss</file>
+    </qresource>
+</RCC>

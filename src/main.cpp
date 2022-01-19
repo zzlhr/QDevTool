@@ -5,7 +5,6 @@
 #include <QTranslator>
 
 
-
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
 
@@ -18,7 +17,6 @@ int main(int argc, char *argv[]) {
             break;
         }
     }
-    setQDevToolApp(&a);
 
     MainWindow w;
     w.show();

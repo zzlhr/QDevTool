@@ -11,6 +11,10 @@
 #include <QPushButton>
 #include <QFileDialog>
 #include <QDirIterator>
+#include <QDebug>
+#include <QStandardPaths>
+#include <QSettings>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class QCodeExport; }
@@ -32,6 +36,10 @@ private:
     void onSelectExportDirHandler();
 
     void onExportClickHandler();
+
+    QString getInputFilter();
+
+    QString getExcludeDirs();
 };
 
 

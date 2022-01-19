@@ -6,16 +6,13 @@
 #include <QMessageBox>
 #include <QDirIterator>
 #include <QCheckBox>
+#include <QApplication>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
-static QApplication *qDevToolApp = nullptr;
 
-static void setQDevToolApp(QApplication *app) {
-    qDevToolApp = qDevToolApp;
-}
 
 class MainWindow : public QMainWindow {
 Q_OBJECT
@@ -33,6 +30,7 @@ public Q_SLOTS:
     void codeExportButtonClickHandler();
 
     void qssChangedHandler(const QString &qss);
+
 };
 
 #endif // MAINWINDOW_H
