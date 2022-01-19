@@ -7,11 +7,12 @@
 #include <QDirIterator>
 #include <QCheckBox>
 #include <QApplication>
+#include <QPainter>
+#include <QSettings>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
-
 
 
 class MainWindow : public QMainWindow {
@@ -25,11 +26,14 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QSettings *configIni;
+
 
 public Q_SLOTS:
-    void codeExportButtonClickHandler();
 
-    void qssChangedHandler(const QString &qss);
+    static void codeExportButtonClickHandler();
+
+    void qssChangedHandler(int index);
 
 };
 

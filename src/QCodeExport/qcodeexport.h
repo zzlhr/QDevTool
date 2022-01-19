@@ -14,7 +14,8 @@
 #include <QDebug>
 #include <QStandardPaths>
 #include <QSettings>
-
+#include <QRegExp>
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class QCodeExport; }
@@ -40,6 +41,11 @@ private:
     QString getInputFilter();
 
     QString getExcludeDirs();
+
+    void getDirFiles(const QString &path, QStringList *list, const QString &inputfilter, const QString &excludeDirs);
+
+    void addFileToWorkList(const QString &path, QStringList *list, const QString &inputfilter);
+
 };
 
 

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>413</width>
-    <height>496</height>
+    <width>390</width>
+    <height>342</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,21 +16,21 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>6</y>
-     <width>101</width>
+     <x>10</x>
+     <y>10</y>
+     <width>81</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>代码项目文件夹:</string>
+    <string>项目文件夹:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_codedir">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>6</y>
+     <x>100</x>
+     <y>10</y>
      <width>201</width>
      <height>20</height>
     </rect>
@@ -42,9 +42,9 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>35</y>
-     <width>101</width>
+     <x>10</x>
+     <y>40</y>
+     <width>81</width>
      <height>21</height>
     </rect>
    </property>
@@ -55,8 +55,8 @@
   <widget class="QLabel" name="label_exportPath">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>36</y>
+     <x>100</x>
+     <y>40</y>
      <width>201</width>
      <height>20</height>
     </rect>
@@ -68,7 +68,7 @@
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>10</x>
      <y>70</y>
      <width>101</width>
      <height>16</height>
@@ -81,9 +81,9 @@
   <widget class="QTextEdit" name="textEdit_codeFileFilter">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>10</x>
      <y>90</y>
-     <width>361</width>
+     <width>371</width>
      <height>74</height>
     </rect>
    </property>
@@ -91,7 +91,7 @@
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>10</x>
      <y>170</y>
      <width>101</width>
      <height>16</height>
@@ -104,9 +104,9 @@
   <widget class="QTextEdit" name="textEdit_excludeDirs">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>10</x>
      <y>190</y>
-     <width>361</width>
+     <width>371</width>
      <height>74</height>
     </rect>
    </property>
@@ -127,10 +127,10 @@
   <widget class="QLabel" name="label_result">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>280</y>
+     <x>10</x>
+     <y>290</y>
      <width>241</width>
-     <height>31</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
@@ -143,7 +143,7 @@
   <widget class="QPushButton" name="pushButton_selectProject">
    <property name="geometry">
     <rect>
-     <x>340</x>
+     <x>310</x>
      <y>0</y>
      <width>71</width>
      <height>31</height>
@@ -156,7 +156,7 @@
   <widget class="QPushButton" name="pushButton_selectExport">
    <property name="geometry">
     <rect>
-     <x>340</x>
+     <x>310</x>
      <y>30</y>
      <width>71</width>
      <height>31</height>

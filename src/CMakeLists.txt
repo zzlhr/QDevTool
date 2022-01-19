@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.5)
 project(QDevTool VERSION 0.1 LANGUAGES CXX)
 
 #set(CMAKE_PREFIX_PATH /Users/liuhaoran/Qt/5.15.2/macos/)
-set(CMAKE_PREFIX_PATH /Users/liuhaoran/Qt6/6.2.1/macos/lib/cmake)
+set(CMAKE_PREFIX_PATH /Users/liuhaoran/Qt/6.2.1/macos/lib/cmake)
 
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -37,6 +37,7 @@ set(PROJECT_SOURCES
 #set (CMAKE_CXX_STANDARD 11)
 
 if (${QT_VERSION_MAJOR} GREATER_EQUAL 6)
+    find_package(Qt6 COMPONENTS Core5Compat REQUIRED)
     qt_add_executable(QDevTool
             MANUAL_FINALIZATION
             ${PROJECT_SOURCES}
@@ -47,6 +48,7 @@ if (${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     # For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
 
     qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
+
 else ()
     if (ANDROID)
         add_library(QDevTool SHARED
@@ -64,7 +66,7 @@ else ()
 endif ()
 
 target_link_libraries(QDevTool PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
-
+target_link_libraries(QDevTool PUBLIC Qt6::Core5Compat)
 set_target_properties(QDevTool PROPERTIES
         MACOSX_BUNDLE_GUI_IDENTIFIER lhrsite.com
         MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
