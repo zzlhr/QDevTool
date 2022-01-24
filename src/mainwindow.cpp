@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "QCodeExport/qcodeexport.h"
+#include "QImageTool/qimagetool.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -8,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     connect(ui->codeExportButton, &QPushButton::clicked, this, &MainWindow::codeExportButtonClickHandler);
     connect(ui->comboBox_qss, &QComboBox::activated, this, &MainWindow::qssChangedHandler);
+    connect(ui->ImageToolButton, &QPushButton::clicked, this, &MainWindow::imageToolButtonClickHandler);
     // 读取皮肤
     QString path(":/res/qss/");
     QDirIterator it(path, QDirIterator::Subdirectories);
@@ -49,5 +51,10 @@ void MainWindow::qssChangedHandler(int index) {
         file.close();
     }
 
+}
+
+void MainWindow::imageToolButtonClickHandler() {
+    auto *qImageTool = new QImageTool;
+    qImageTool->show();
 }
 

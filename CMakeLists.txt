@@ -8,5 +8,3 @@ file(GLOB_RECURSE RESOURCES config)
 file(COPY config/ DESTINATION ${PROJECT_BINARY_DIR}/bin/config)
 
 add_subdirectory(src ${PROJECT_BINARY_DIR}/bin)
-#install(PROGRAMS )
-install(DIRECTORY ./resources ./config DESTINATION ${CMAKE_INSTALL_PREFIX}/)

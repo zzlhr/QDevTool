@@ -35,6 +35,8 @@ public Q_SLOTS:
 
     void qssChangedHandler(int index);
 
+    void imageToolButtonClickHandler();
+
 };
 
 #endif // MAINWINDOW_H
