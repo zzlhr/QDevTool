@@ -30,11 +30,16 @@ public Q_SLOT:
 
     void onGrayscaleBtnClicked();
 
+    void onR2lClicked();
+
 private:
     Ui::QImageTool *ui;
     cv::Mat srcImg;
     cv::Mat dstImg;
+
     void LabelDisplayMat(QLabel *label, cv::Mat &mat);
+
+    void clearImageLabel(QLabel *label);
 };
 
 

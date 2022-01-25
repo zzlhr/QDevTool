@@ -15,10 +15,16 @@ QImageTool::QImageTool(QWidget *parent) :
             this, &QImageTool::onOpenImageBtnClicked);
     connect(ui->grayscaleBtn, &QPushButton::clicked,
             this, &QImageTool::onGrayscaleBtnClicked);
+    connect(ui->pushButton_r2l, &QPushButton::clicked,
+            this, &QImageTool::onR2lClicked);
 }
 
 QImageTool::~QImageTool() {
     delete ui;
+}
+
+void QImageTool::clearImageLabel(QLabel *label) {
+    label->clear();
 }
 
 void QImageTool::LabelDisplayMat(QLabel *label, cv::Mat &mat) {
@@ -56,6 +62,11 @@ void QImageTool::onOpenImageBtnClicked() {
 void QImageTool::onGrayscaleBtnClicked() {
     cv::cvtColor(srcImg, dstImg, cv::COLOR_RGB2GRAY);
     LabelDisplayMat(ui->img_des, dstImg);
+}
+
+void QImageTool::onR2lClicked() {
+    LabelDisplayMat(ui->img_src, dstImg);
+    clearImageLabel(ui->img_des);
 }
 
 
